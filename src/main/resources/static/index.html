@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Airports</title>
+    <link rel="stylesheet" type="text/css" href="styles/common.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon32.png">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<h1>Airports</h1>
+<div class="header">
+    <div class="label">Country</div>
+    <select id="countrySelect"></select>
+    <input type="checkbox" id="noFilterCheckbox">No filtering (first 1000 airports)<br>
+</div>
+<div class="table" id="airportsTable">
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>IATA</th>
+            <th>ICAO</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Altitude</th>
+            <th>Timezone Offset</th>
+            <th>DST</th>
+            <th>Timezone Name</th>
+            <th>Type</th>
+            <th>Source</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+</body>
+
+<script src="scripts/core.js"></script>
+
+</html>
