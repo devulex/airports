@@ -39,7 +39,7 @@ public class CSVReader {
         List<Airport> airports = new ArrayList<>();
         try (Reader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
              CSVParser csvParser = new CSVParser(reader, CSV_FORMAT)) {
-            for (CSVRecord csvRecord : csvParser) {
+            for (var csvRecord : csvParser) {
                 if (csvRecord.size() != NUMBER_OF_COLUMNS) {
                     throw new IOException("Invalid file format. The number of columns must be " + NUMBER_OF_COLUMNS
                             + ". Record number is " + csvRecord.getRecordNumber());

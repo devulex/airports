@@ -45,13 +45,13 @@ public class ImportData {
      */
     @Scheduled(fixedRate = 3600_000)
     public void periodicImport() {
-        StopWatch sw = new StopWatch();
+        var sw = new StopWatch();
         sw.start();
         try {
             if (inputFilePath == null || inputFilePath.isEmpty()) {
                 airportsCache.setAirports(csvReader.read(defaultInputFile.getInputStream()));
             } else {
-                File initialFile = new File(inputFilePath);
+                var initialFile = new File(inputFilePath);
                 airportsCache.setAirports(csvReader.read(new FileInputStream(initialFile)));
             }
         } catch (Exception e) {
