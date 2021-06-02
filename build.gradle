@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.2.1.RELEASE'
+        springBootVersion = '2.5.0'
     }
     repositories {
         mavenCentral()
@@ -17,8 +17,8 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'war'
 
 group = 'com.devulex'
-version = '0.0.1'
-sourceCompatibility = '11'
+version = '1.0.0'
+sourceCompatibility = '16'
 
 repositories {
     mavenCentral()
@@ -30,7 +30,7 @@ configurations {
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    compile "org.apache.commons:commons-csv:1.7"
+    compile "org.apache.commons:commons-csv:1.8"
     providedRuntime "org.springframework.boot:spring-boot-starter-tomcat:${springBootVersion}"
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
 }

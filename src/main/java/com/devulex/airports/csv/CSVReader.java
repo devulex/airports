@@ -3,7 +3,6 @@ package com.devulex.airports.csv;
 import com.devulex.airports.entity.Airport;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
-import org.apache.commons.csv.CSVRecord;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,15 +48,15 @@ public class CSVReader {
                     throw new IOException("Country can not be null. Record number is " + csvRecord.getRecordNumber());
                 }
                 Airport airport = new Airport();
-                airport.setId(Long.valueOf(csvRecord.get(0)));
+                airport.setId(Long.parseLong(csvRecord.get(0)));
                 airport.setName(csvRecord.get(1));
                 airport.setCity(csvRecord.get(2));
                 airport.setCountry(country);
                 airport.setIATA(csvRecord.get(4));
                 airport.setICAO(csvRecord.get(5));
-                airport.setLatitude(Double.valueOf(csvRecord.get(6)));
-                airport.setLongitude(Double.valueOf(csvRecord.get(7)));
-                airport.setAltitude(Integer.valueOf(csvRecord.get(8)));
+                airport.setLatitude(Double.parseDouble(csvRecord.get(6)));
+                airport.setLongitude(Double.parseDouble(csvRecord.get(7)));
+                airport.setAltitude(Integer.parseInt(csvRecord.get(8)));
                 airport.setTimezoneOffset(csvRecord.get(9) != null ? new BigDecimal(csvRecord.get(9)) : null);
                 airport.setDST(csvRecord.get(10));
                 airport.setTimezoneName(csvRecord.get(11));
