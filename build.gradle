@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.6.1'
+        springBootVersion = '3.3.2'
     }
     repositories {
         mavenCentral()
@@ -18,7 +18,7 @@ apply plugin: 'war'
 
 group = 'com.devulex'
 version = '1.0.0'
-sourceCompatibility = '16'
+sourceCompatibility = '21'
 
 repositories {
     mavenCentral()
@@ -31,7 +31,7 @@ configurations {
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
     implementation "com.squareup.okhttp:okhttp:2.7.5"
-    implementation "org.apache.commons:commons-csv:1.9.0"
+    implementation "org.apache.commons:commons-csv:1.11.0"
     providedRuntime "org.springframework.boot:spring-boot-starter-tomcat:${springBootVersion}"
     testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
 }

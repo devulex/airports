@@ -32,7 +32,7 @@ public class CSVReader {
      * Прочитать список аэропортов из потока
      *
      * @param inputStream поток csv-файла
-     * @return спискок аэропортов
+     * @return список аэропортов
      */
     public List<Airport> read(InputStream inputStream) throws IOException {
         List<Airport> airports = new ArrayList<>();
